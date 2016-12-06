@@ -315,6 +315,7 @@ html#comments">15 reviews</a></p>
     </div>
 </div>-->
 <!-- 3d carousel -->
+<center><h1 style="font-family:monotype corsiva;color:purple"> Some gifts are big others are small,But the ones that come from heart are the best of all!!</h1></center>
 <div class="back1">
 <div id="perspective">
   <div id="carousel">
@@ -339,13 +340,13 @@ html#comments">15 reviews</a></p>
   
   <div class="row">
     <div class="col-sm-4">
-      <a href="gfh.jsp"><img alt="gfh" src="resources\img\giftforher.jfif"></a>
+      <a href="gfh"><img alt="gfh" src="resources\img\giftforher.jfif"></a>
     </div>
     <div class="col-sm-4">
-      <a href="#"><img alt="gfh" src="resources\img\hm.jfif"></a>
+      <a href="hm"><img alt="gfh" src="resources\img\hm.jfif"></a>
     </div>
      <div class="col-sm-4">
-     <a href="#"><img alt="gfh" src="resources\img\gfhi.jfif"></a>
+     <a href="gfhim"><img alt="gfh" src="resources\img\gfhi.jfif"></a>
     </div>
   </div>
    <div class="row">
@@ -353,16 +354,16 @@ html#comments">15 reviews</a></p>
     <a href="#"><img alt="gfh" src="resources\img\flowers.jfif"></a>
     </div>
     <div class="col-sm-4">
-      <a href="#"><img alt="gfh" src="resources\img\diwali.jfif"></a>
+      <a href="#"><img class="img-responsive" alt="gfh" src="resources\img\diwali.jfif"></a>
     </div>
      <div class="col-sm-4">
     <a href="#"><img alt="gfh" src="resources\img\choc.jfif"></a>
     </div>
   </div>
 </div>
+<form action="Insert"><input type="submit" value="ok"></form>
 
 
-</div>
 
 <!-- Image links end -->
 <!-- footer -->

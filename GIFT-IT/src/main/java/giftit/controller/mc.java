@@ -15,4 +15,16 @@ public class mc {
 	public ModelAndView signup(){
 		return new ModelAndView("signup");
 	}
+	@RequestMapping("/gfh")
+	public ModelAndView gfh(){
+		return new ModelAndView("gfh");
+	}
+	@RequestMapping("/gfhim")
+	public ModelAndView gfhim(){
+		return new ModelAndView("gfhim");
+	}
+	@RequestMapping("/hm")
+	public ModelAndView hm(){
+		return new ModelAndView("hm");
+	}
 }
