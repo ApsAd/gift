@@ -30,7 +30,11 @@ SessionFactory sessionFactory;
 
 	public void updateUser(User u) {
 		// TODO Auto-generated method stub
-		
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		sess.save(u);
+		tx.commit();
+		sess.close();
 	}
 
 	public List<User> listUsers() {
@@ -61,6 +65,29 @@ Session sess=sessionFactory.openSession();
 			sess.delete(u);
 		trx.commit();
 		sess.close();
+	}
+
+	public int check(String em, String pwd) {
+		// TODO Auto-generated method stub
+Session sess=sessionFactory.openSession();
+		
+		listUsers=sess.createQuery("from User").list();
+		for(int i=0;i<listUsers.size();i++){
+			User u=listUsers.get(i);
+			String e=u.getEmail();
+			String p=u.getPassword();
+			System.out.println(u.getEmail());
+			System.out.print(u.getPassword());
+			System.out.print(em);
+			System.out.println(pwd);
+			if(e.equals(em)){
+				if(p.equals(pwd)){
+					return u.getId();
+				}
+			}
+		}
+		System.out.println(listUsers);
+		return 0;
 	}
 
 }

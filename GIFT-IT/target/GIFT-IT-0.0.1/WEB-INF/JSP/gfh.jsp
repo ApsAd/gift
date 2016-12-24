@@ -405,7 +405,7 @@
              <a  href="#carousel-example1"  data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" ></span>
      </a>
-     <a class="rc" href="#carousel-example1" role="button" data-slide="next">
+     <a class="rc" href="#carousel-example1" role="button" data-slide="next" style="position: absolute;">
       <span class="glyphicon glyphicon-chevron-right" ></span>
       </a> 
                 <div class="item active">

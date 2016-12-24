@@ -2,6 +2,10 @@ package giftit.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-
-
+import giftit.model.Product;
 import giftit.model.User;
 import giftit.service.UserServDao;
 
@@ -46,19 +49,48 @@ public class UserController {
 		mv.addObject("hello");
 		return mv;
 	}
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public String listPersons(Model model) {
-		model.addAttribute("user", new User());
-		model.addAttribute("listUsers", udi.listUsers());
-		return "user";
+	@RequestMapping("/toLogin")
+	public ModelAndView showform(){
+		return new ModelAndView("loginform","command",new User());
+		
+		
 	}
-	@RequestMapping(value="/user/add",method=RequestMethod.POST)
-	public String addUser(@ModelAttribute("user")User u){
-		if(u.getId()==0){
-			udi.addUser(u);
+	@RequestMapping("/check")
+	public ModelAndView check(HttpServletRequest req){
+		String email=req.getParameter("email");
+		String pwd=req.getParameter("pass");
+		int f=udi.check(email, pwd);
+		if(f!=0){
+			 ModelAndView mv=new ModelAndView();
+		        mv.setViewName("welcome");
+		        User u2=udi.getUserById(f);
+		        mv.addObject("u",u2);
+		     return mv;
 		}
-		
-		return "redirect:/users";
-		
+		else{
+		return new ModelAndView("error");
+	   }
 	}
+	@RequestMapping("/welcome")
+	public ModelAndView welcome(){
+		return new ModelAndView("welcome");
+	}
+	@RequestMapping(value="/saveuser",method = RequestMethod.POST)  
+    public ModelAndView save(@ModelAttribute("user") User u){  
+        udi.addUser(u); 
+        ModelAndView mv=new ModelAndView();
+        mv.setViewName("welcome");
+        User u2=udi.getUserById(u.getId());
+        mv.addObject("u",u2);
+        System.out.println(u2.getFname());
+        //return new ModelAndView("redirect:/welcome","u",u2);//will redirect to viewemp request mapping  
+        return mv;
+	}  
+    /* It provides list of employees in model object */  
+    @RequestMapping("/viewusers")  
+    public ModelAndView viewusers(){  
+        List<User> list=udi.listUsers();  
+        return new ModelAndView("viewusers","list",list);  
+    }  
+
 }

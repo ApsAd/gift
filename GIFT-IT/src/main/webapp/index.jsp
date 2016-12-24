@@ -361,9 +361,10 @@ html#comments">15 reviews</a></p>
     </div>
   </div>
 </div>
-<form action="Insert"><input type="submit" value="ok"></form>
+<form action="insertprod"><input type="submit" value="ok"></form>
 
-
+<a href="productform">Add Product</a>
+<a href="viewprod">View Product</a>
 
 <!-- Image links end -->
 <!-- footer -->

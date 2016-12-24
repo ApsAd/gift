@@ -16,6 +16,14 @@
 	<mvc:annotation-driven />
 	
     <mvc:default-servlet-handler/>
+    
+    <bean id="ud" class="giftit.dao.UserDaoImpl"/>
+ <bean id="udi" class="giftit.service.UserServDaoImpl" />
+<bean id="user" class="giftit.model.User"/>
+
+<bean id="pd" class="giftit.dao.ProductDaoImpl"/>
+ <bean id="pdi" class="giftit.service.ProductServDaoImpl" />
+
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">

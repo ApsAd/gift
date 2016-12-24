@@ -41,5 +41,10 @@ public class UserServDaoImpl implements UserServDao{
 		// TODO Auto-generated method stub
 	ud.removeUser(id);	
 	}
+	public int check(String em, String pwd) {
+		// TODO Auto-generated method stub
+		int f=ud.check(em, pwd);
+		return f;
+	}
 
 }

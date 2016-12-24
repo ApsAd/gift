@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">-->
+
 <!DOCTYPE html >
 <html>
 <head>
@@ -19,7 +19,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="resources\js\script1.js"></script>
 <link  rel="stylesheet" type="text/css" href="resources\css\style.css">
 
 </head>
@@ -37,7 +37,7 @@
 <br>
 <br>
 <br>
-<div><!-- 
+<!-- <div>
 <div class="jumbotron">
 <form>
 <div class="form-group log">
@@ -80,77 +80,78 @@
 <body>
 <h1>
 	Add a Person
-</h1>-->
+</h1>
 
-<c:url var="addAction" value="/user/add" ></c:url>
+<c:url var="addAction" value="user/add" ></c:url>-->
+<script>
+function check(){
+	var fname=document.forms["f1"]["fn"].value;
+	if(fname.length<2)
+	window.alert("Username should not be null");
+	//var x=document.getElementById("c").value;
+	//window.alert("hi"+x);
+}
+</script>
+<input type="text" id="c" onblur="check()">
+<h1>Add New User</h1>  
+       <form:form method="post" action="saveuser" name="f1" onsubmit="check()">    
+        <table >    
+         <tr>    
+          <td>First Name: </td>   
+          <td><form:input name="fn" path="fname" required="required" /></td>  
+         </tr>    
+          <tr>    
+          <td> Last Name : </td>   
+          <td><form:input path="lname"  /></td>  
+         </tr>  
+          <tr>    
+          <td>Email: </td>   
+          <td><form:input type="email" path="email" required="required" /></td>  
+         </tr>  
+          <tr>    
+          <td>Password : </td>   
+          <td><form:input name="p1" type="password" path="password"  /></td>  
+         </tr> 
+         <tr>    
+          <td>Confirm Password : </td>   
+          <td><form:input type="password" name="p2" path="password"   /></td>  
+         </tr>  
+          <tr>    
+          <td>Address 1 : </td>   
+          <td><form:input path="address1" required="required" /></td>  
+         </tr>  
+          <tr>    
+          <td>Address 2 : </td>   
+          <td><form:input path="address2" required="required" /></td>  
+         </tr>  
+          <tr>    
+          <td>City: </td>   
+          <td><form:input path="city" name="city" required="required"/></td>  
+         </tr>  
+          <tr>    
+          <td>State : </td>   
+          <td><form:input path="state" name="state" required="required" /></td>  
+         </tr>  
+          <tr>    
+          <td>Zip: </td>   
+          <td><form:input path="zip" name="zip" required="required" /></td>  
+         </tr>  
+         <tr>    
+          <td>Country :</td>    
+          <td><form:input path="country" name="country" required="required"/></td>  
+         </tr>   
+         <tr>    
+          <td>Phone no:</td>    
+          <td><form:input path="phone" name="phno" type="tel" required="required" data-rule-phoneUS="true" /></td>  
+         </tr>   
+         <tr>    
+          <td> </td>    
+          <td><input type="submit" value="Save" /></td>    
+         </tr>    
+        </table>    
+       </form:form>  
 
-<form:form action="${addAction}" commandName="user">
-<table>
-	<c:if test="${!empty user.fname}">
-	<tr>
-		<td>
-			<form:label path="id">
-				<spring:message text="ID"/>
-			</form:label>
-		</td>
-		<td>
-			<form:input path="id" readonly="true" size="8"  disabled="true" />
-			<form:hidden path="id" />
-		</td> 
-	</tr>
-	</c:if>
-	<tr>
-		<td>
-			<form:label path="fname">
-				<spring:message text="fname"/>
-			</form:label>
-		</td>
-		<td>
-			<form:input path="fname" />
-		</td> 
-	</tr>
-	<tr>
-		<td>
-			<form:label path="city">
-				<spring:message text="city"/>
-			</form:label>
-		</td>
-		<td>
-			<form:input path="city" />
-		</td>
-	</tr>
-	<tr>
-		<td >
-			
-			<c:if test="${empty user.fname}">
-				<input type="submit"
-					value="<spring:message text="Add Person"/>" />
-			</c:if>
-		</td>
-	</tr>
-</table>	
-</form:form>
-<br>
-<h3>Persons List</h3>
-<c:if test="${!empty listUsers}">
-	<table class="tg">
-	<tr>
-		<th width="80">Person ID</th>
-		<th width="120">Person Name</th>
-		<th width="120">Person Country</th>
-		<th width="60">Edit</th>
-		<th width="60">Delete</th>
-	</tr>
-	<c:forEach items="${listUsers}" var="person">
-		<tr>
-			<td>${person.id}</td>
-			<td>${person.fname}</td>
-			<td>${person.city}</td>
-			
-			
-		</tr>
-	</c:forEach>
-	</table>
-</c:if>
+
+</div>
 </body>
 </html>

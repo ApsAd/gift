@@ -87,7 +87,7 @@
             <a  href="#carousel-example"  data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" ></span>
      </a>
-     <a class="rc" href="#carousel-example" role="button" data-slide="next">
+     <a class="rc" href="#carousel-example" role="button" data-slide="next" style="position: absolute;">
       <span class="glyphicon glyphicon-chevron-right" ></span>
       </a> 
                 <div class="item active">
@@ -245,7 +245,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\tees\t5.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h5.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -280,7 +280,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\tees\t6.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h6.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -314,7 +314,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\tees\t7.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h7.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -348,7 +348,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\tees\t8.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h8.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -396,7 +396,7 @@
             <a  href="#carousel-example1"  data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" ></span>
      </a>
-     <a class="rc" href="#carousel-example1" role="button" data-slide="next">
+     <a class="rc" href="#carousel-example1" role="button" data-slide="next" style="position: absolute;">
       <span class="glyphicon glyphicon-chevron-right" ></span>
       </a> 
                 <div class="item active">
@@ -417,7 +417,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w1.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h9.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -450,7 +450,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w2.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h10.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -482,7 +482,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w3.jpg" class="img-responsive" alt="a" />
+                                   <img src="resources\img\hm\h11.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -516,7 +516,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w4.jpg" alt="a" />
+                                     <img src="resources\img\hm\h12.jpg" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -552,7 +552,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w5.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h13.jpg" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -585,7 +585,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w6.jpg" class="img-responsive" alt="a" />
+                                     <img src="resources\img\hm\h14.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -618,7 +618,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w7.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h15.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">
@@ -652,7 +652,7 @@
                                 </div>
 
                                 <div class="photo">
-                                    <img src="resources\img\men\watches\w8.jpg" class="img-responsive" alt="a" />
+                                    <img src="resources\img\hm\h16.jfif" class="img-responsive"  alt="a" width="200px" height="400px" />
                                 </div>
                                 <div class="info">
                                     <div class="separator clear-left">

@@ -56,14 +56,14 @@ type="submit">Sign in</button>
  </div>
 </div></div>-->
 <div class="jumbotron">
-<form>
+<form action="check" method="post">
 <div class="form-group log">
     <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+    <input type="email" class="form-control" id="email" name="email">
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <input type="password" class="form-control" id="pwd" name="pass">
   </div>
  <button type="submit" class="btn btn-default">Submit</button>
 </form>

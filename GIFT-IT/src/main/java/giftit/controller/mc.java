@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class mc {
-	@RequestMapping("/toLogin")
-	public ModelAndView loginpage(){
-		return new ModelAndView("loginform");
-	}
+	//@RequestMapping("/toLogin")
+	//public ModelAndView loginpage(){
+		//return new ModelAndView("loginform");
+	//}
 	@RequestMapping("/signup")
 	public ModelAndView signup(){
 		return new ModelAndView("signup");

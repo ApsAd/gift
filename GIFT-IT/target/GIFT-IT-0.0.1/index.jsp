@@ -361,7 +361,7 @@ html#comments">15 reviews</a></p>
     </div>
   </div>
 </div>
-
+<form action="insertprod"><input type="submit" value="ok"></form>
 
 
 
